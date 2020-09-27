@@ -27,6 +27,18 @@ public class BackEnd {
 	public int size() {
 		return size;
 	}
+	
+	public boolean containsKey(String key) {
+		return map.containsKey(key);
+	}
+	
+	public String remove(String key) {
+		return map.remove(key);
+	}
+	
+	public void clear() {
+		return map.clear();
+	}
 }
    
    
