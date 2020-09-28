@@ -16,7 +16,13 @@ public class BackEnd {
 	
 	
 	public boolean put(String key, AcademicClass course) {
-		return map.put(key, course);
+		if (!map.containsKey(key)) {
+			return map.put(key, course);
+		}
+		else {
+			remove(key);
+			return map.put(key, course);
+		}
 	}
 	
 	
@@ -32,12 +38,12 @@ public class BackEnd {
 		return map.containsKey(key);
 	}
 	
-	public String remove(String key) {
+	public AcademicClass remove(String key) {
 		return map.remove(key);
 	}
 	
 	public void clear() {
-		return map.clear();
+		map.clear();
 	}
 }
    
