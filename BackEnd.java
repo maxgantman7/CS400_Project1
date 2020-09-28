@@ -16,6 +16,8 @@ public class BackEnd {
 	
 	
 	public boolean put(String key, AcademicClass course) {
+		// did this based on the TA note at the top, not sure if this is what he meant
+	
 		if (!map.containsKey(key)) {
 			return map.put(key, course);
 		}
