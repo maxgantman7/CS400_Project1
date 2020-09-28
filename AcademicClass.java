@@ -5,7 +5,19 @@ public class AcademicClass.java {
   private double percentF;
   
   //TODO: write constructor
-
+  public AcademicClass() {
+    avgGPA = null;
+    percentA = null;
+    percentF = null;
+  }
+  
+  public AcademicClass(double gpa, double a, double f) {
+    	avgGPA = gpa;
+    	percentA = a;
+    	percentF = f;
+  }
+  
+  
   protected double getAvgGPA() {
     return avgGPA;
   }
