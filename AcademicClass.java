@@ -6,9 +6,9 @@ public class AcademicClass.java {
   
   //TODO: write constructor
   public AcademicClass() {
-    avgGPA = null;
-    percentA = null;
-    percentF = null;
+    // avgGPA = 0.0;
+    // percentA = 0.0;
+    // percentF = 0.0;
   }
   
   public AcademicClass(double gpa, double a, double f) {
