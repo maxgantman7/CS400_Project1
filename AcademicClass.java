@@ -11,12 +11,14 @@ public class AcademicClass.java {
     // percentF = 0.0;
   }
   
+  // Needs to include class name as a parameter
   public AcademicClass(double gpa, double a, double f) {
     	avgGPA = gpa;
     	percentA = a;
     	percentF = f;
   }
   
+  // Needs to include set ad get class name
   
   protected double getAvgGPA() {
     return avgGPA;
