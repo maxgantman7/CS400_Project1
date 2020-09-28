@@ -1,32 +1,32 @@
 
 public class AcademicClass.java {
-  Private double avgGPA;
-  Private double percentA;
-  Private double percentF;
+  private double avgGPA;
+  private double percentA;
+  private double percentF;
   
   //TODO: write constructor
 
   protected double getAvgGPA() {
-    
+    return avgGPA;
   }
   
   protected double getPercentA() {
-    
+    return percentA;
   }
   
   protected double percentF() {
-    
+    return percentF();
   }
   
-  protected void setAvgGPA() {
-    
+  protected void setAvgGPA(double gpa) {
+    avgGPA = gpa;
   }
   
-  protected void setPercentA() {
-    
+  protected void setPercentA(double percent) {
+    percentA = percent;
   }
   
-  protected void setPercentF() {
-    
+  protected void setPercentF(double percent) {
+    percentF = percent;
   }
 }
