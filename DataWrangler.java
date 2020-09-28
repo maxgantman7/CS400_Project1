@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
 *This method creates an arraylist of AcademicClass objects by reading a text file.
 */
-public static void dataWrangler (String fileName){ 
+public static void dataWrangler (String fileName){ // This should throw FileNotFoundException and then the test method should catch it
 AcademicClass[] classList = new AcademicClass[12];
     int i = 0;
     try {
