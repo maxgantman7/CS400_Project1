@@ -1,71 +1,59 @@
+import java.util.NoSuchElementException;
+
 /**
-* Class used to help interface front end with hash table mapping
-*/
+ * remember note from TA:
+ * (Back End developer): What if the user inputs duplicate data
+ * (for the same key i.e class)?  Shouldn't it overwrite the old
+ * values (probably we want to update to the latest semester data)
+ * Note: This differs from the HashTable implementation part, where
+ * you have been asked to retain the old values itself if the key
+ * already exists in the HashTable.
+ */
+
 public class BackEnd {
-	HashTableMap<String, AcademicClass> map = new HashTableMap<String, AcademicClass>();
-	
-	
-	/*
-	 * Puts the academic class into the hash table
-	 * @param key - key value to be put in hash table
-	 * @param course - AcademicClass to be put in hash table
-	 * @return true if the class is successfully put into the table, false otherwise
-	 */
-	public boolean put(String key, AcademicClass course) {
-		if (!map.containsKey(key)) {
-			// if the key is not in the hash table
-			return map.put(key, course);
-		}
-		else {
-			// if the key is already in the hash table, then the old data for the class with that 
-			// key is replaced with the new data
-			remove(key);
-			return map.put(key, course);
-		}
-	}
-	
-	/*
-	 * Returns the academic class that has the specified key
-	 * @param key - key to look for
-	 * @return the academic class with the specified key
-	 * @throws NoSuchElementException if the key does not exist
-	 */
-	public AcademicClass get(String key) throws NoSuchElementException {
-		return map.get(key);
-	}
-	
-	/*
-	 * Returns the size of the hash table
-	 * @return the size of the hash table
-	 */
-	public int size() {
-		return size;
-	}
-	
-	/*
-	* Communicates if the key argument is contained in the hash table
-	* @param key - key to look for
-	* @return true if the key is in the hash table
-	*/
-	public boolean containsKey(String key) {
-		return map.containsKey(key);
-	}
-	
-	/*
-	* Removes data in the HashTable associated with the key argument
-	* @param key - key associated with data to be removed
-	* @return the AcademicClass associated with the key
-	*/
-	public AcademicClass remove(String key) {
-		return map.remove(key);
-	}
-	
-	/*
-	* Clears the HashTable
-	*/
-	public void clear() {
-		map.clear();
-	}
+
+  private int size;
+  private HashTableMap<String, AcademicClass> map;
+
+  // Back end constructor
+  public BackEnd(){
+    this.map = new HashTableMap<String, AcademicClass>();
+    this.size = 0;
+  }
+
+  public boolean put(String key, AcademicClass course) {
+    // did this based on the TA note at the top, not sure if this is what he meant
+    if (!map.containsKey(key)) {
+      this.size++;
+      return map.put(key, course);
+    }
+    else {
+      remove(key);
+      this.size--;
+      return map.put(key, course);
+    }
+  }
+
+
+  public AcademicClass get(String key) throws NoSuchElementException{
+    return map.get(key);
+  }
+
+  public int size() {
+    return size;
+  }
+
+  public boolean containsKey(String key) {
+    return map.containsKey(key);
+  }
+
+  public AcademicClass remove(String key) {
+    return map.remove(key);
+  }
+
+  public void clear() {
+    map.clear();
+    this.size = 0;
+  }
 }
-   
    
