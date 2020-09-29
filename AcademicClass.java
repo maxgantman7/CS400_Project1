@@ -1,46 +1,48 @@
+public class AcademicClass{
+private double avgGPA;
+private double percentA;
+private double percentF;
+private String className;
 
-public class AcademicClass.java {
-  private double avgGPA;
-  private double percentA;
-  private double percentF;
+
+public AcademicClass(String className, double gpa, double a, double f) {
+    this.avgGPA = gpa;
+    this.percentA = a;
+    this.percentF = f;
+    this.className = className;
+    }
+
   
-  //TODO: write constructor
-  public AcademicClass() {
-    // avgGPA = 0.0;
-    // percentA = 0.0;
-    // percentF = 0.0;
-  }
+    public String getClassName() {
+        return this.className;
+    }
+
+public double getAvgGPA() {
+    return this.avgGPA;
+    }
+
+public double getPercentA() {
+    return this.percentA;
+    }
+
+public double percentF() {
+    return this.percentF;
+    }
+
   
-  // Needs to include class name as a parameter
-  public AcademicClass(double gpa, double a, double f) {
-    	avgGPA = gpa;
-    	percentA = a;
-    	percentF = f;
-  }
-  
-  // Needs to include set ad get class name
-  
-  protected double getAvgGPA() {
-    return avgGPA;
-  }
-  
-  protected double getPercentA() {
-    return percentA;
-  }
-  
-  protected double percentF() {
-    return percentF();
-  }
-  
-  protected void setAvgGPA(double gpa) {
-    avgGPA = gpa;
-  }
-  
-  protected void setPercentA(double percent) {
-    percentA = percent;
-  }
-  
-  protected void setPercentF(double percent) {
-    percentF = percent;
-  }
-}
+public void setClassName(String className) {
+        this.className = className;
+    }
+
+public void setAvgGPA(double gpa) {
+    this.avgGPA = gpa;
+    }
+
+public void setPercentA(double percent) {
+    this.percentA = percent;
+    }
+
+public void setPercentF(double percent) {
+    this.percentF = percent;
+    }
+    }
