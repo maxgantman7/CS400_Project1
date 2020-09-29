@@ -20,9 +20,12 @@ public class BackEnd {
 	 */
 	public boolean put(String key, AcademicClass course) {
 		if (!map.containsKey(key)) {
+			// if the key is not in the hash table
 			return map.put(key, course);
 		}
 		else {
+			// if the key is already in the hash table, then the old data for the class with that 
+			// key is replaced with the new data
 			remove(key);
 			return map.put(key, course);
 		}
