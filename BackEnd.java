@@ -14,10 +14,11 @@ public class BackEnd {
 	HashTableMap<String, AcademicClass> map = new HashTableMap<String, AcademicClass>();
 	
 	
-	
+	/*
+	 * Puts the academic class into the hash table
+	 * @return true if the class is successfully put into the table, false otherwise
+	 */
 	public boolean put(String key, AcademicClass course) {
-		// did this based on the TA note at the top, not sure if this is what he meant
-	
 		if (!map.containsKey(key)) {
 			return map.put(key, course);
 		}
@@ -27,11 +28,19 @@ public class BackEnd {
 		}
 	}
 	
-	
+	/*
+	 * Returns the academic class that has the specified key
+	 * @return the academic class with the specified key
+	 * @throws NoSuchElementException if the key does not exist
+	 */
 	public AcademicClass get(String key) throws NoSuchElementException {
 		return map.get(key);
 	}
 	
+	/*
+	 * Returns the size of the hash table
+	 * @return the size of the hash table
+	 */
 	public int size() {
 		return size;
 	}
