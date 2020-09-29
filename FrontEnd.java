@@ -34,6 +34,7 @@ public class FrontEnd {
         + "*h: display the help menu\n"
         + "*n: new search\n"
         + "*a: add new class\n"
+        + "*f: add file of classes to table\n"      
         + "*q: quit program\n");
     printDivider();
   }
