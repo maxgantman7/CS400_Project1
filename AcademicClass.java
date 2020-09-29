@@ -25,7 +25,7 @@ public double getPercentA() {
     return this.percentA;
     }
 
-public double percentF() {
+public double getPercentF() {
     return this.percentF;
     }
 
