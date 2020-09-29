@@ -1,21 +1,14 @@
 /**
-	 * remember note from TA:
-	 * (Back End developer): What if the user inputs duplicate data 
-	 * (for the same key i.e class)?  Shouldn't it overwrite the old 
-	 * values (probably we want to update to the latest semester data) 
-	 * Note: This differs from the HashTable implementation part, where 
-	 * you have been asked to retain the old values itself if the key 
-	 * already exists in the HashTable. 
-	 */
-  
+* Class used to help interface front end with hash table mapping
+*/
 public class BackEnd {
-	
-	int size;
 	HashTableMap<String, AcademicClass> map = new HashTableMap<String, AcademicClass>();
 	
 	
 	/*
 	 * Puts the academic class into the hash table
+	 * @param key - key value to be put in hash table
+	 * @param course - AcademicClass to be put in hash table
 	 * @return true if the class is successfully put into the table, false otherwise
 	 */
 	public boolean put(String key, AcademicClass course) {
@@ -33,6 +26,7 @@ public class BackEnd {
 	
 	/*
 	 * Returns the academic class that has the specified key
+	 * @param key - key to look for
 	 * @return the academic class with the specified key
 	 * @throws NoSuchElementException if the key does not exist
 	 */
@@ -48,14 +42,27 @@ public class BackEnd {
 		return size;
 	}
 	
+	/*
+	* Communicates if the key argument is contained in the hash table
+	* @param key - key to look for
+	* @return true if the key is in the hash table
+	*/
 	public boolean containsKey(String key) {
 		return map.containsKey(key);
 	}
 	
+	/*
+	* Removes data in the HashTable associated with the key argument
+	* @param key - key associated with data to be removed
+	* @return the AcademicClass associated with the key
+	*/
 	public AcademicClass remove(String key) {
 		return map.remove(key);
 	}
 	
+	/*
+	* Clears the HashTable
+	*/
 	public void clear() {
 		map.clear();
 	}
