@@ -56,17 +56,30 @@ public class BackEnd {
     return size;
   }
 
-  public boolean containsKey(String key) {
-    return map.containsKey(key);
-  }
+  /*
+	 * Tells whether or not the hash table contains the specified key
+	 * 
+	 * @return true if the table contains the key, false otherwise
+	 */
+	public boolean containsKey(String key) {
+		return map.containsKey(key);
+	}
 
-  public AcademicClass remove(String key) {
-    return map.remove(key);
-  }
+	/*
+	 * Removes the academic class with the specified key from the hash table
+	 * 
+	 * @return the AcademicClass that was removed
+	 */
+	public AcademicClass remove(String key) {
+		return map.remove(key);
+	}
 
-  public void clear() {
-    map.clear();
-    this.size = 0;
-  }
+	/*
+	 * Gets rid of all items in the hash table and resets the size to zero
+	 */
+	public void clear() {
+		map.clear();
+		this.size = 0;
+	}
 }
    
