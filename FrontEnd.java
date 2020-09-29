@@ -157,9 +157,6 @@ public class FrontEnd {
 
     course = new AcademicClass(classCode, gpa, percentA, percentF);
 
-    if(!map.put(classCode, course)) {
-      //TODO NEED TO CHANGE THE PUT TO UPDATE THE CLASS;
-    }
     System.out.println("Added class" + classCode);
     System.out.println("Enter another command");
   }
