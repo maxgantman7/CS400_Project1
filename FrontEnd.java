@@ -4,7 +4,7 @@
 // Team: FD
 // TA: Abhay
 // Lecturer: Dahl
-// Notes to Grader: <optional extra notes>
+// Notes to Grader: dataWrangler method done by Max Gantman
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -34,7 +34,6 @@ public class FrontEnd {
         + "*h: display the help menu\n"
         + "*n: new search\n"
         + "*a: add new class\n"
-        + "*f: add file of classes to table\n"      
         + "*q: quit program\n");
     printDivider();
   }
@@ -200,7 +199,7 @@ public class FrontEnd {
     printDivider();
     System.out.println("*For " + classCode +":\n"
         + "*Percentage A's from last year: " + course.getPercentA() + "\n"
-        + "*Percentage F's from last year: " + course.percentF() + "\n"
+        + "*Percentage F's from last year: " + course.getPercentF() + "\n"
         + "*Average GPA from last year: " + course.getAvgGPA());
     printDivider();
     // print it out
